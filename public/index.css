@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 #ibentitynaaf-a01-RT0{	border-style:none;	z-index:2;	position: absolute;	left:326px;	top:280px;	width:14px;	height:14px;	text-align:left;	background: transparent;	font:normal 10px Arial, Helvetica, sans-serif;}
 #ibentitynaaf-a01-RT1{	border-style:none;	z-index:2;	position: absolute;	left:382px;	top:280px;	width:14px;	height:14px;	text-align:left;	background: transparent;	font:normal 10px Arial, Helvetica, sans-serif;}
 #ibentitynaaf-a01-RT2{	border-style:none;	z-index:2;	position: absolute;	left:231px;	top:280px;	width:14px;	height:14px;	text-align:left;	background: transparent;	font:normal 10px Arial, Helvetica, sans-serif;}
@@ -28,7 +23,16 @@ body {
 #ibentitynaaf-a02-TPA_9{	z-index:2;	position: absolute;	left:604px;	top:1094px;	width:95px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border-color:transparent;	font:normal 15px Arial, Helvetica, sans-serif;}
 #ibentitynaaf-a02-MA_9{	z-index:2;	position: absolute;	left:604px;	top:876px;	width:95px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border-color:transparent;	font:normal 15px Arial, Helvetica, sans-serif;}
 #ibentitynaaf-a02-LA_9{	z-index:2;	position: absolute;	left:604px;	top:675px;	width:95px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border-color:transparent;	font:normal 15px Arial, Helvetica, sans-serif;}
-
+#ibentitynaaf-form1_26{	border-style:none;	z-index:2;	position: absolute;	left:792px;	top:12px;	width:90px;	height:34px;	color: rgb(255,255,255); 	text-align:left;	background-color: rgb(107,150,218); 	background-image: url("1/form/1295 0 ROff.png");	background-repeat: no-repeat;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form1_26:active
+{	background-image: url("1/form/1295 0 RDownOff.png");
+	background-repeat: no-repeat;
+}
+#ibentitynaaf-form1_27{	border-style:none;	z-index:2;	position: absolute;	left:694px;	top:12px;	width:90px;	height:34px;	color: rgb(255,255,255); 	text-align:left;	background-color: rgb(107,150,218); 	background-image: url("1/form/1291 0 ROff.png");	background-repeat: no-repeat;	font:normal 18px Arial, Helvetica, sans-serif;}
+#form1_27:active
+{	background-image: url("1/form/1295 0 RDownOff.png");
+	background-repeat: no-repeat;
+}
 #ibentitynaaf-a02-TPA_4{	z-index:2;	position: absolute;	left:231px;	top:1053px;	width:118px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border-color:transparent;	font:normal 15px Arial, Helvetica, sans-serif;}
 #ibentitynaaf-a02-TPA_1{	z-index:2;	position: absolute;	left:231px;	top:1012px;	width:118px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border-color:transparent;	font:normal 15px Arial, Helvetica, sans-serif;}
 #ibentitynaaf-a02-LA_1{	z-index:2;	position: absolute;	left:231px;	top:593px;	width:118px;	height:23px;	color: rgb(0,0,0); 	text-align:left;	background: transparent;	border-color:transparent;	font:normal 15px Arial, Helvetica, sans-serif;}
