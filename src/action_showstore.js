@@ -7,6 +7,8 @@ export default function(state = [], action){
     case 'SHOW_STORE':
       console.log('state = ',state)
       return state;
+    default:
+      return state;
   }
-  return state;
+  
 }

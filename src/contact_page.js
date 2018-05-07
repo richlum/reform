@@ -3,6 +3,7 @@ import ContactForm from './contact_form'
 
 class ContactPage extends React.Component{
   submit = values => {
+    console.log("submitting")
     console.log(values)
   }
   render(){

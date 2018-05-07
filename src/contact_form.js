@@ -13,23 +13,22 @@ let formparts = () => {
   // })
   let fields = page1fields()
   fields.forEach( fld => {
-    console.log("loading field ", fld)
+  //  console.log("loading field ", fld)
     parts.push(
       <div key={fld.id}>
         <Field
           name={fld.name}
           component="input"
           type={fld.type}
-          tabindex={fld.tabindex}
+          tabIndex={fld.tabindex}
           id={fld.id}
           value={fld.value}
-          pdfFieldName={fld.pdffieldname}
+          pdffieldname={fld.pdffieldname}  //not pdfFieldName
+          label={fld.pdffieldname}
         />
       </div>
     )
   })
-
-
 
   parts.push(
     <button key="submitbtn" type="submit">Submit</button>
@@ -37,24 +36,70 @@ let formparts = () => {
   return parts
 }
 
-
-let ContactForm = props => {
-  const { handleSubmit } = props
-
-//  console.log(handleSubmit)
-  let fields = handleSubmit
-  console.log(fields);
-  let cnt = 0;
-  for( let {k,v} in fields){
-    console.log(cnt,k,v)
-  }
-  return <form onSubmit={handleSubmit}>
-    {formparts()}
-  </form>
+const renderField = ({ input, label, type, meta: {touched,error, warning}}) => {
+  console.log('renderfield')
+  console.log('input',input)
+  console.log('label',label)
+  console.log('type', type)
+  console.log('touched', touched)
+  console.log('error',error)
+  console.log('warning',warning)
+  return (
+    <div>
+      <label>{label}</label>
+      <span>{error}</span>
+      <span>{warning}</span>
+    </div>
+  )
 }
 
+
+
+
+
+let ContactForm = props => {
+  const { handleSubmit,pristine,reset, submitting } = props
+  return (
+    <div>
+      <Field name="messages" component={renderField} label="Notification:" />
+      <form onSubmit={handleSubmit}>
+        {formparts()}
+      </form>
+    </div> )
+}
+
+const validate = values => {
+  console.log('values',values)
+  console.log(values['02-EntityName'])
+
+  const errors = {}
+  if (!values['02-EntityName'] || values['02-EntityName'].length < 4){
+    errors['messages'] = '02-EntityName Required name of at least 4 characters'
+    console.log('02-entityname error')
+  }
+  if (Object.keys(values).length < 3){
+    errors['messages'] = "Not enough fields have been completed"
+    console.log('errors[messages]', Object.keys(values).length)
+  }
+
+  return errors;
+}
+
+const warning = values => {
+  const warnings = {}
+  if(!values['01-CR']){
+    warning['01-CR'] = 'Missing 01-CR, Must be New or Update'
+    console.log('warning')
+  }
+  return warnings
+}
+
+
+
 ContactForm = reduxForm({
-  form: 'contact'
+  form: 'contact',
+  validate,
+  warning
 })(ContactForm)
 // when appropriate, reduxForm will call our ContactForm method
 

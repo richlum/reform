@@ -1,6 +1,6 @@
-'use strict'
+//'use strict'
 
-let page1flds = 
+let page1flds =
 [
   {
     "title": "Registration Type",

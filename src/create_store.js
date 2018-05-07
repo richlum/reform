@@ -14,5 +14,5 @@ let store = createStore (rootReducer)
 
 // for console access to dump/alter store directly
 window.store = store;
-window.reducer = rootReducer;
+
 export default store;
